@@ -1,3 +1,4 @@
+import { RuleResponse } from '@customTypes/index';
 import { MIN_ALPHA_RATE_PERCENTAGE } from '@data/constants';
 
 export class AlphaRateRule {
@@ -7,16 +8,18 @@ export class AlphaRateRule {
    * @param email The email of the contact
    * @returns boolean true if rate is valid, false otherwise
    */
-  static async validate(email: string): Promise<boolean> {
+  static async validate(email: string): Promise<RuleResponse> {
     const localPart = email.split('@')[0];
     const totalLength = localPart.length;
 
     const letterCount = localPart
       .split('')
-      .filter((char) => /^[A-Za-z]$/.test(char)).length;
+      .filter((char) => /^[A-Za-z0-9]$/.test(char)).length;
 
     const percentage = (letterCount / totalLength) * 100;
-
-    return percentage > MIN_ALPHA_RATE_PERCENTAGE;
+    return {
+      ruleName: this.ruleName,
+      isValid: percentage > MIN_ALPHA_RATE_PERCENTAGE
+    };
   }
 }

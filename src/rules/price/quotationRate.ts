@@ -1,3 +1,4 @@
+import { RuleResponse } from '@customTypes/index';
 import { MAX_PRICE_INTERVAL_PERCENTAGE } from '@data/constants';
 import QuotationService from '@services/quotationService';
 import { Pub } from '@customTypes/index';
@@ -9,7 +10,7 @@ export class PriceQuotationRule {
    * @param pub The full Ad of the vehicule
    * @returns boolean true if price is in 20% margin, false otherwise
    */
-  static async validate(pub: Pub): Promise<boolean> {
+  static async validate(pub: Pub): Promise<RuleResponse> {
     const pubPrice = pub.price;
     const vehicule = pub.vehicle;
 
@@ -19,7 +20,9 @@ export class PriceQuotationRule {
       quotationPrice - quotationPrice * MAX_PRICE_INTERVAL_PERCENTAGE;
     const upperBound =
       quotationPrice + quotationPrice * MAX_PRICE_INTERVAL_PERCENTAGE;
-
-    return pubPrice > lowerBound && pubPrice < upperBound;
+    return {
+      ruleName: this.ruleName,
+      isValid: pubPrice > lowerBound && pubPrice < upperBound
+    };
   }
 }

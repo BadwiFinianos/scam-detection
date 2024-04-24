@@ -1,4 +1,4 @@
-import { Contacts } from "@customTypes/index";
+import { Contacts, Vehicle } from '@customTypes/index';
 
 export interface Pub {
   contacts: Contacts;

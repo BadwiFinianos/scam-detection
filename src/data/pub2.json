@@ -1,0 +1,24 @@
+{
+   "contacts": {
+      "firstName": "Sophie",
+      "lastName": "Martin",
+      "email": "sophie.martin@yopmail.fr",
+      "phone": {
+         "value": "0614151617"
+      }
+   },
+   "creationDate": "2020-11-30T18:50:50.8912",
+   "price": 18000,
+   "publicationOptions": [
+      "STRENGTHS"
+   ],
+   "reference": "B300058910",
+   "vehicle": {
+      "make": "NISSAN",
+      "model": "QASHQAI",
+      "version": "II 1.3 DIG-T 160 N-CONNECTA",
+      "category": "SUV_4X4_CROSSOVER",
+      "registerNumber": "DD456DD",
+      "mileage": 85000
+   }
+}

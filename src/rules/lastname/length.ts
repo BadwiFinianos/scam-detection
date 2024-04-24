@@ -1,3 +1,4 @@
+import { RuleResponse } from '@customTypes/index';
 import { MIN_LENGTH } from '@data/constants';
 
 export class LastnameLengthRule {
@@ -7,7 +8,10 @@ export class LastnameLengthRule {
    * @param lastname The lastname of the contact
    * @returns boolean true if length is valid, false otherwise
    */
-  static async validate(lastname: string): Promise<boolean> {
-    return lastname?.length > MIN_LENGTH;
+  static async validate(lastname: string): Promise<RuleResponse> {
+    return {
+      ruleName: this.ruleName,
+      isValid: lastname?.length > MIN_LENGTH
+    };
   }
 }

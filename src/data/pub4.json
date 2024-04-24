@@ -1,0 +1,25 @@
+{
+   "contacts": {
+      "firstName": "Marie",
+      "lastName": "Durand",
+      "email": "marie.durand@yopmail.fr",
+      "phone": {
+         "value": "0708091011"
+      }
+   },
+   "creationDate": "2020-05-15T14:45:30.1234",
+   "price": 21000,
+   "publicationOptions": [
+      "STRENGTHS",
+      "BOOST_VO"
+   ],
+   "reference": "B300054624",
+   "vehicle": {
+      "make": "TOYOTA",
+      "model": "RAV4",
+      "version": "V 2.5 HYBRID AWD-I DYNAMIC",
+      "category": "SUV_4X4_CROSSOVER",
+      "registerNumber": "BB234BB",
+      "mileage": 75000
+   }
+}

@@ -1,3 +1,4 @@
+import { RuleResponse } from '@customTypes/index';
 import { BlocklistService } from '@services/blocklistService';
 
 export class BlocklistRule {
@@ -7,7 +8,10 @@ export class BlocklistRule {
    * @param registerNumber The vehicule's register number
    * @returns boolean true if registerNumber is not blocked, false otherwise
    */
-  static async validate(registerNumber: string): Promise<boolean> {
-    return !(await BlocklistService.isBlocked(registerNumber));
+  static async validate(registerNumber: string): Promise<RuleResponse> {
+    return {
+      ruleName: this.ruleName,
+      isValid: !(await BlocklistService.isBlocked(registerNumber))
+    };
   }
 }

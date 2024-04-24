@@ -1,0 +1,24 @@
+{
+   "contacts": {
+      "firstName": "Laurent",
+      "lastName": "Lefevre",
+      "email": "laurent.lef@yopmail.fr",
+      "phone": {
+         "value": "0611121314"
+      }
+   },
+   "creationDate": "2020-08-20T16:35:40.5678",
+   "price": 25000,
+   "publicationOptions": [
+      "BOOST_VO"
+   ],
+   "reference": "B300056789",
+   "vehicle": {
+      "make": "FORD",
+      "model": "KUGA",
+      "version": "III 2.5 DURATEC 190 PHEV ST-LINE X",
+      "category": "SUV_4X4_CROSSOVER",
+      "registerNumber": "CC345CC",
+      "mileage": 50000
+   }
+}

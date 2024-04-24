@@ -4,10 +4,8 @@
   "description": "This code is a test to be submitted to GLC",
   "main": "src/app.js",
   "scripts": {
-    "build": "tsc",
-    "start": "tsc && node dist/app.js",
-    "dev": "ts-node src/app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/app.ts",
+    "test": "jest",
     "lint": "eslint . --ext .ts"
   },
   "author": "",
@@ -19,6 +17,9 @@
     "@data": "./src/data"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-typescript": "^7.24.1",
     "@eslint/eslintrc": "^3.0.2",
     "@eslint/js": "^9.1.1",
     "@types/jest": "^29.5.12",
