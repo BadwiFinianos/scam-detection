@@ -1,13 +1,13 @@
-import { Vehicle } from 'types/vehicule';
-
+import { Vehicle } from '@customTypes/index';
+import { VEHICULE_PRICE } from '@data/constants';
 /**
- * Simulates fetching the quotation for a vehicle with a delay.
+ * Simulates fetching the quotation for a vehicle with a delay
  */
-export class QuotationService {
+export default class QuotationService {
   /**
-   * Gets the quotation of a vehicle with simulated network delay.
-   * @param vehicle The vehicle object containing details like make, model, version, etc.
-   * @returns Promise<number> A promise that resolves with the quotation price.
+   * Gets the quotation of a vehicle with simulated delay
+   * @param vehicle The vehicle object
+   * @returns Promise<number> A promise that resolves with the quotation price, 35000 as mock
    */
   static async getQuotation(vehicle: Vehicle): Promise<number> {
     // Simulate a network delay of 50ms
@@ -17,7 +17,7 @@ export class QuotationService {
         console.log(
           `Calculating quotation for: ${vehicle.make} ${vehicle.model} (${vehicle.version})`
         );
-        resolve(35000);
+        resolve(VEHICULE_PRICE);
       }, 50)
     );
   }
