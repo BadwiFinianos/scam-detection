@@ -17,9 +17,9 @@ export class PriceQuotationRule {
     const quotationPrice = await QuotationService.getQuotation(vehicule);
 
     const lowerBound =
-      quotationPrice - quotationPrice * MAX_PRICE_INTERVAL_PERCENTAGE;
+      quotationPrice - (quotationPrice * MAX_PRICE_INTERVAL_PERCENTAGE) / 100;
     const upperBound =
-      quotationPrice + quotationPrice * MAX_PRICE_INTERVAL_PERCENTAGE;
+      quotationPrice + (quotationPrice * MAX_PRICE_INTERVAL_PERCENTAGE) / 100;
     return {
       ruleName: this.ruleName,
       isValid: pubPrice > lowerBound && pubPrice < upperBound

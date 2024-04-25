@@ -1,5 +1,5 @@
 // Services
-const VEHICULE_PRICE = 3500;
+const VEHICULE_PRICE = 35000;
 const BLOCKED_NUMBERS = ['AA123AA'];
 
 // Validation rules
