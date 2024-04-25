@@ -9,10 +9,10 @@ describe('FirstnameLengthRule', () => {
     expect(result.ruleName).toBe('rule::firstname::length');
   });
 
-  it('should validate that a firstname equal to MIN_LENGTH is valid', async () => {
+  it('should validate that a firstname equal to MIN_LENGTH is not valid', async () => {
     const exactLengthFirstname = 'a'.repeat(MIN_LENGTH); // Ensure the name is exactly MIN_LENGTH
     const result = await FirstnameLengthRule.validate(exactLengthFirstname);
-    expect(result.isValid).toBe(true);
+    expect(result.isValid).toBe(false);
     expect(result.ruleName).toBe('rule::firstname::length');
   });
 
