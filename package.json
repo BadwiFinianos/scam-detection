@@ -4,7 +4,9 @@
   "description": "This code is a test to be submitted to GLC",
   "main": "src/app.js",
   "scripts": {
-    "start": "ts-node src/app.ts",
+    "build":"tsc",
+    "dev":"ts-node src/app.ts",
+    "start": "npm run build && ts-node dist/app.js",
     "test": "jest",
     "lint": "eslint . --ext .ts"
   },
