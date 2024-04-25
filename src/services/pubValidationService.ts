@@ -8,15 +8,6 @@ import {
   BlocklistRule
 } from '@rules/index';
 
-const allRules = [
-  FirstnameLengthRule,
-  LastnameLengthRule,
-  AlphaRateRule,
-  NumberRateRule,
-  PriceQuotationRule,
-  BlocklistRule
-];
-
 /**
  * Check the pub against all rules
  */

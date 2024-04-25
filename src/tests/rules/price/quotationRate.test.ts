@@ -1,6 +1,5 @@
 import { PriceQuotationRule } from '@rules/index';
 import QuotationService from '@services/quotationService';
-import { MAX_PRICE_INTERVAL_PERCENTAGE } from '@data/constants';
 
 // Mock the QuotationService
 jest.mock('@services/quotationService');
